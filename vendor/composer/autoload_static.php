@@ -36,6 +36,10 @@ class ComposerStaticInitb626863f1b30e80db54cd3aec17c2e4e
         array (
             'Noodlehaus\\' => 11,
         ),
+        'M' => 
+        array (
+            'Medoo\\' => 6,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -76,6 +80,10 @@ class ComposerStaticInitb626863f1b30e80db54cd3aec17c2e4e
         'Noodlehaus\\' => 
         array (
             0 => __DIR__ . '/..' . '/hassankhan/config/src',
+        ),
+        'Medoo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/catfan/medoo/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

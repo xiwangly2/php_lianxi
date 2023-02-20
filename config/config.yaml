@@ -3,19 +3,24 @@ config:
   debug: true
 # 测试版
   beta: true
-  db: 'mysql'
+  use_db: 'mysql'
 
 mysql:
   # use mysql
-  database_type: 'mysql'
   database_name: 'test'
   server: 'localhost'
   username: 'test'
   password: '123456'
-  # optional
-  # charset: 'utf8'
+  # mysql optional
+  charset: 'utf8mb4'
   port: '3306'
 sqlite:
   # use sqlite
-  database_type: 'sqlite'
   database_file: 'my/database/path/database.db'
+postgresql:
+    database_name: 'postgres'
+    server: 'localhost'
+    username: 'postgres'
+    password: '123456'
+    # postgresql optional
+    port: '5432'

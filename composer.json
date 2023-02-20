@@ -3,6 +3,7 @@
         "guzzlehttp/guzzle": "~6.0",
         "hassankhan/config": "^3.0",
         "phpmailer/phpmailer": "^6.7",
-        "symfony/yaml": "^5.4"
+        "symfony/yaml": "^5.4",
+        "catfan/medoo": "^2.1"
     }
 }
