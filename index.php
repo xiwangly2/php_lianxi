@@ -6,10 +6,8 @@ define('is_include',true);
 include_once(WORKDIR.'/include/index.php');
 // composer
 require_once(WORKDIR.'/vendor/autoload.php');
-use Noodlehaus\Config;
-use Noodlehaus\Parser\Json;
-use Noodlehaus\Parser\Yaml;
-$config = new Config(file_get_contents(WORKDIR.'/config/config.yaml'), new Yaml, true);
-$debug = $config['config']['debug'];
-echo("测试：{$debug}");
+
+
+
+
 ?>

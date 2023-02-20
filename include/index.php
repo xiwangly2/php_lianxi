@@ -6,7 +6,7 @@ $list = scandir('include',0);
 for($i = 0;$i < count($list);$i++){
     if(preg_match('#^(index.php)$#i',$list[$i])){
     }
-    elseif(preg_match('#.+\.(php|inc)$#i',$list[$i]) && is_file($list[$i])){
+    elseif(preg_match('#.+\.(php|inc)$#i',$list[$i]) && is_file(WORKDIR.'/include/'.$list[$i])){
         include_once(WORKDIR.'/include/'.$list[$i]);
     }
 }

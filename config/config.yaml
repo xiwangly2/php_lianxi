@@ -3,10 +3,19 @@ config:
   debug: true
 # 测试版
   beta: true
+  db: 'mysql'
 
-db:
-  type: 'mysql'
-  host: 'localhost'
-  database: 'name'
-  username: 'your_username'
-  password: 'your_password'
+mysql:
+  # use mysql
+  database_type: 'mysql'
+  database_name: 'test'
+  server: 'localhost'
+  username: 'test'
+  password: '123456'
+  # optional
+  # charset: 'utf8'
+  port: '3306'
+sqlite:
+  # use sqlite
+  database_type: 'sqlite'
+  database_file: 'my/database/path/database.db'
