@@ -1,0 +1,12 @@
+config:
+# 调试模式
+  debug: true
+# 测试版
+  beta: true
+
+db:
+  type: 'mysql'
+  host: 'localhost'
+  database: 'name'
+  username: 'your_username'
+  password: 'your_password'
