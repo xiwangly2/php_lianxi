@@ -1,4 +1,5 @@
 config:
+  workdir: ''
 # 调试模式
   debug: true
 # 测试版

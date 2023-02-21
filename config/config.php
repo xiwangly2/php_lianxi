@@ -7,6 +7,8 @@ use Noodlehaus\Config;
 use Noodlehaus\Parser\Yaml;
 $config = new Config(file_get_contents(WORKDIR.'/config/config.yaml'), new Yaml, true);
 //config
+$config_workdir = $config['config']['workdir'];
+empty($config_workdir) ? $config_workdir = $_SERVER['DOCUMENT_ROOT'] : $config_workdir;
 $config_debug = $config['config']['debug'];
 $config_beta = $config['config']['beta'];
 $config_use_db = $config['config']['use_db'];
