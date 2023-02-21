@@ -6,4 +6,13 @@ include_once(WORKDIR.'/config/config.php');
 include_once(WORKDIR.'/include/index.php');
 // composer
 require_once(WORKDIR.'/vendor/autoload.php');
+
+$data = $database->select('user', [
+    'id'
+]);
+echo '<pre>';
+echo(json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+echo '</pre>';
+
+
 ?>
