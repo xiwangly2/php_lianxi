@@ -51,9 +51,9 @@ include_once(WORKDIR.'/include/index.php');
 
     <form method="post">
         <label>用户名：</label>
-        <input type="text" name="username" required><br><br>
+        <input type="text" name="username" required><br/><br/>
         <label>密码：</label>
-        <input type="password" name="password" required><br><br>
+        <input type="password" name="password" required><br/><br/>
         <button type="submit">登录</button>
     </form>
 </body>
