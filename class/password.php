@@ -15,7 +15,7 @@ class PasswordHasher {
         $hash = hash('sha256', $salt . $password);
 
         // 将盐值和哈希值拼接起来
-        return bin2hex($salt . $hash);
+        return base64_encode($salt . $hash);
     }
 
     /**
@@ -27,7 +27,7 @@ class PasswordHasher {
      */
     public static function verify(string $password, string $hashedPassword): bool {
         // 获取存储的盐值
-        $hashedPassword = pack("H*",$hashedPassword);
+        $hashedPassword = base64_decode($hashedPassword);
         $salt = substr($hashedPassword, 0, 16);
 
         // 用相同的方法生成密码哈希值

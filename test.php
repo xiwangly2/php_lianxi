@@ -18,6 +18,10 @@ echo $test1;
 
 echo "<br/>";
 
+// echo strlen($test1);
+
+echo "<br/>";
+
 echo $password_hash->verify("123456",$test1);
 
 ?>
