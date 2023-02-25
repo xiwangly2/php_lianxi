@@ -36,22 +36,6 @@ require_once(WORKDIR.'/class/password.php');
             echo '邮箱或密码错误！';
         }
     }
+
+require_once(WORKDIR.'/html/login.html');
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>用户登录</title>
-</head>
-<body>
-    <h1>用户登录</h1>
-
-    <form method="post">
-        <label>邮箱：</label>
-        <input type="text" name="email" required><br/><br/>
-        <label>密码：</label>
-        <input type="password" name="password" required><br/><br/>
-        <button type="submit">登录</button>
-    </form>
-</body>
-</html>

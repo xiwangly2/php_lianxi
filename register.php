@@ -41,5 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '用户名已存在！';
     }
 }
+
 require_once(WORKDIR.'/html/register.html');
 ?>
