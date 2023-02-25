@@ -9,14 +9,14 @@ define('is_include',true);
 //     if(preg_match('#^(index.php)$#i',$list[$i])){
 //     }
 //     elseif(preg_match('#.+\.(php|inc)$#i',$list[$i]) && is_file(WORKDIR.'/include/'.$list[$i])){
-//         include_once(WORKDIR.'/include/'.$list[$i]);
+//         require_once(WORKDIR.'/include/'.$list[$i]);
 //     }
 // }
 
 // composer
 require_once(WORKDIR.'/vendor/autoload.php');
 // 配置文件
-include_once(WORKDIR.'/include/config.inc');
+require_once(WORKDIR.'/include/config.inc');
 // 连接数据库
-include_once(WORKDIR.'/include/sql.inc');
+require_once(WORKDIR.'/include/sql.inc');
 ?>

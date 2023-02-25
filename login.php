@@ -1,6 +1,7 @@
 <?php
 define('WORKDIR',getcwd());
-include_once(WORKDIR.'/include/index.php');
+require_once(WORKDIR.'/include/index.php');
+require_once(WORKDIR.'/class/password.php');
 
 // $data = $database->select('user', [
 //     'id'
@@ -14,29 +15,25 @@ include_once(WORKDIR.'/include/index.php');
 <?php
     // 处理用户提交的登录表单
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $data = $database->select('user', [
-            'id'
-        ]);
-
-        // 检查用户名和密码是否正确
+        // 检查邮箱和密码是否正确
         $result = $database->select("user", [
-            "username",
+            "email",
             "password"
         ], [
-            "username" => $username,
-            "password" => $password
+            "email" => $email
         ]);
 
-        if (!empty($result)) {
+        $password_hash = new PasswordHasher();
+        if ($password_hash->verify($password,$result[0]['password'])) {
             // 登录成功，将用户重定向到欢迎页面
             header('Location: welcome.php');
             exit;
         } else {
             // 登录失败，显示错误消息
-            echo '用户名或密码错误！';
+            echo '邮箱或密码错误！';
         }
     }
 ?>
@@ -50,8 +47,8 @@ include_once(WORKDIR.'/include/index.php');
     <h1>用户登录</h1>
 
     <form method="post">
-        <label>用户名：</label>
-        <input type="text" name="username" required><br/><br/>
+        <label>邮箱：</label>
+        <input type="text" name="email" required><br/><br/>
         <label>密码：</label>
         <input type="password" name="password" required><br/><br/>
         <button type="submit">登录</button>
