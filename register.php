@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 define('WORKDIR',getcwd());
 
 require_once(WORKDIR.'/include/index.php');
@@ -10,6 +12,19 @@ require_once(WORKDIR.'/class/password.php');
 
 // 检查用户名是否已存在
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $verification_code = $_SESSION["verification_code"];
+    $verification_code_time = $_SESSION["verification_code_time"];
+    $user_input_verification_code = $_POST["verification_code"];
+
+    if (time() - $verification_code_time > 300) { // 验证码过期时间为 5 分钟
+        // 验证码已过期，处理错误
+        die('验证码已过期，请重试');
+    } elseif ($user_input_verification_code != $verification_code) {
+        // 验证码不正确，处理错误
+        die('验证码错误');
+    } else {
+        // 验证码正确，处理表单数据
+    }
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
