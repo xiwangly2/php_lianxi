@@ -27,13 +27,16 @@ require_once(WORKDIR.'/class/password.php');
         ]);
 
         $password_hash = new PasswordHasher();
-        if ($password_hash->verify($password,$result[0]['password'])) {
+        if (empty($result[0]['email'])) {
+            $echo = '<div class="alert alert-warning" role="alert">用户不存在！</div>';
+        }
+        elseif ($password_hash->verify($password,$result[0]['password'])) {
             // 登录成功，将用户重定向到欢迎页面
             header('Location: welcome.php');
             exit;
         } else {
             // 登录失败，显示错误消息
-            echo '邮箱或密码错误！';
+            $echo = '<div class="alert alert-warning" role="alert">邮箱或密码错误！</div>';
         }
     }
 

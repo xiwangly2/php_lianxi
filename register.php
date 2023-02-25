@@ -18,9 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (time() - $verification_code_time > 300) { // 验证码过期时间为 5 分钟
         // 验证码已过期，处理错误
+        require_once(WORKDIR.'/html/register.html');
         die('验证码已过期，请重试');
     } elseif ($user_input_verification_code != $verification_code) {
         // 验证码不正确，处理错误
+        require_once(WORKDIR.'/html/register.html');
         die('验证码错误');
     } else {
         // 验证码正确，处理表单数据

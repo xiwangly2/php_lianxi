@@ -3,15 +3,21 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>用户注册</title>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body>
-    <h1>用户注册</h1>
+    <h1 align="center">用户注册</h1>
     <form method="post">
-        <label for="username">用户名：</label>
-        <input type="text" id="username" name="username" required><br/><br/>
-
-        <label for="password">密码：</label>
-        <input type="password" id="password" name="password" required><br/><br/>
+        <div class="mb-3">
+            <label for="username" class="from-label">用户名：</label>
+            <input type="text" class="form-control" placeholder="请输入用户名" name="username" value="<?php echo($username); ?>" required>
+        </div>
+        
+        <div class="mb-3">
+        <label for="password" class="from-label">密码：</label>
+        <input type="password" class="form-control" placeholder="请输入密码" name="password" required>
+        </div>
 
         <label for="confirm_password">确认密码：</label>
         <input type="password" id="confirm_password" name="confirm_password" required><br/><br/>
