@@ -22,6 +22,7 @@ $captcha_str = randomkeys(6);
 
 // 将验证码字符串存储在会话中
 $_SESSION['captcha'] = $captcha_str;
+$_SESSION['verification_code_time'] = time();
 
 // 创建空白图像
 $image = imagecreatetruecolor($image_width, $image_height);
