@@ -23,5 +23,3 @@ echo "<br/>";
 echo "<br/>";
 
 echo $password_hash->verify("123456",$test1);
-
-?>
