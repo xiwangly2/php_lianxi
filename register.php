@@ -5,9 +5,7 @@ define('WORKDIR',getcwd());
 
 require_once(WORKDIR.'/include/index.php');
 require_once(WORKDIR.'/class/password.php');
-?>
 
-<?php
 // 处理用户提交的注册表单
 
 // 检查用户名是否已存在
@@ -64,4 +62,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 require_once(WORKDIR.'/html/register.html');
-?>

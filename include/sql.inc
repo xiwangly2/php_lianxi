@@ -36,4 +36,3 @@ try{
 catch(Exception $e){
     echo('数据库连接出问题了：'.$e->getMessage());
 }
-?>
