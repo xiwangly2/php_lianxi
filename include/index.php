@@ -1,7 +1,7 @@
 <?php
 
 // 定义is_include常量，用于限制include/*只能通过引用访问
-define('IS_INCLUDE',true);
+define('is_include',true);
 
 // 遍历载入include文件夹的php和inc文件
 // $list = scandir('include',0);

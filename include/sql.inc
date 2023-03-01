@@ -1,6 +1,6 @@
 <?php
 //只能通过引用访问
-!defined('IS_INCLUDE') && die();
+!defined('is_include') && die();
 
 // Using Medoo namespace.
 use Medoo\Medoo;
