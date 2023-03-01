@@ -82,5 +82,3 @@ class Snowflake {
 // 使用示例
 // $snowflake = new Snowflake(1, 1);
 // echo $snowflake->nextId();
-
-?>

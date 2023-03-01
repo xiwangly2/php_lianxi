@@ -25,4 +25,3 @@ require_once(WORKDIR.'/include/sql.inc');
 // }
 
 // spl_autoload_register('my_autoloader');
-?>

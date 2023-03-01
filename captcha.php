@@ -64,4 +64,3 @@ imagepng($image);
 
 // 清理内存
 imagedestroy($image);
-?>

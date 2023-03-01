@@ -32,5 +32,3 @@ $postgresql_username = $config['postgresql']['username'];
 $postgresql_password = $config['postgresql']['password'];
 // postgresql optional
 $postgresql_port = $config['postgresql']['port'];
-
-?>

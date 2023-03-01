@@ -17,5 +17,3 @@ if ($method == 'send_verification_code'){
     // $verification_code = $_POST["verification_code"];
     echo($verification_code);
 }
-
-?>

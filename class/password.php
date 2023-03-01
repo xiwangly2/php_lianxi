@@ -37,5 +37,3 @@ class PasswordHasher {
         return $hash === substr($hashedPassword, 16);
     }
 }
-
-?>
