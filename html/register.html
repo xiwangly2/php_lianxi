@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>用户注册</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        form-control, input {
+        form-control,
+        input {
             width: auto;
             height: auto;
         }
     </style>
 </head>
+
 <body>
     <div class="col-6 mx-auto">
         <h1>用户注册</h1>
@@ -20,7 +23,7 @@
                 <label for="username" class="form-label">用户名：</label>
                 <input type="text" class="form-control" placeholder="请输入用户名" id="username" name="username" value="<?php echo($username); ?>" required>
             </div>
-            
+
             <div class="mb-3">
                 <label for="password" class="form-label">密码：</label>
                 <input type="password" class="form-control" placeholder="请输入密码" id="password" name="password" value="<?php echo($username); ?>" required>
@@ -39,7 +42,7 @@
             <div class="mb-3 row">
                 <label for="verification_code" class="form-label">验证码：</label>
                 <dt class="col-sm-9"><input type="text" class="form-control" placeholder="请输入验证码" id="verification_code" name="verification_code" value="<?php echo($_POST['verification_code']); ?>" required></dt>
-                <dd class="col-sm-3"><img src="./captcha.php" class="img-fluid" alt="验证码图片"></dd>
+                <dd class="col-sm-3"><img src="./captcha.php" class="img-fluid" alt="captcha" onclick="this.src='captcha.php';"></dd>
             </div>
 
             <div class="d-grid gap-2 col-1 mx-auto">
@@ -53,4 +56,5 @@
     <script src="js/register.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

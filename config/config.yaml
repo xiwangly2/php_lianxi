@@ -8,9 +8,9 @@ config:
 
 mysql:
   # use mysql
-  database_name: 'test'
+  database_name: 'localhost'
   server: 'localhost'
-  username: 'test'
+  username: 'localhost'
   password: '123456'
   # mysql optional
   charset: 'utf8mb4'
