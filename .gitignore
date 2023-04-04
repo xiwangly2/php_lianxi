@@ -2,3 +2,5 @@
 *.bak
 # phpMyAdmin
 phpMyAdmin*/
+# install
+installer/installed.lock
