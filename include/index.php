@@ -19,6 +19,8 @@ require_once(WORKDIR.'/vendor/autoload.php');
 require_once(WORKDIR.'/include/config.inc');
 // 连接数据库
 require_once(WORKDIR.'/include/sql.inc');
+// 函数调用
+require_once(WORKDIR.'/include/function.inc');
 
 // function my_autoloader($class) {
 //     require_once(WORKDIR.'/include/'.$class.'inc');
